@@ -1,5 +1,9 @@
 package crib;
 
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Game {
 
 
@@ -18,13 +22,13 @@ public class Game {
 			hand2.cards[i]=myDeck.cards[i+6];
 
 		}
-		
+
 		hand3.cards[0]= new Card('h', 7);
 		hand3.cards[1]= new Card('s', 7);
 		hand3.cards[2]= new Card('c', 7);
 		hand3.cards[3]= new Card('d', 8);
-		
-		
+
+
 		System.out.println();
 		System.out.println(myDeck.cards[13].val);
 		System.out.println(hand1.toString());
@@ -34,7 +38,7 @@ public class Game {
 		System.out.println(hand3.toString());
 		System.out.println("Score3:  "+ hand3.score(new Card('d', 8)));
 
-		int loops =1000000;
+		int loops =100000;
 		double total=0;
 		Hand dealerHand = new Hand();
 		Hand poneHand = new Hand();
@@ -52,8 +56,12 @@ public class Game {
 			total+=hand1.score(myDeck.cards[13]);
 			total+=hand2.score(myDeck.cards[13]);
 			}
-		
+
 		System.out.println("Average:  "+ total/(loops*2));
+
+
+
+
 	}
 
 }
